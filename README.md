@@ -56,7 +56,8 @@ app server ──POST /v1/address/create─────────────�
 │     gum-engine   ◀──(outbox) PaymentFactory.execute ──┤
 │                  ──webhook──▶ transaction.included / confirmed / failed
 │                                                       │
-│     the app      ◀──(outbox) address.funded / settled / refunded / … ──┘
+│     the app      ◀──(outbox) webhooks ────────────────┘
+│                  address.funded / settled / refunded / …
 │
 └──────────────────────────────────────────────────────────────────────────────────────────
       gum-indexer reads and gum-engine sends through QuickNode RPCs, on:
