@@ -113,7 +113,7 @@ same-origin `/api/execute` proxy forwards an allowlist of routes to execute-serv
 
 ### Environment variables
 
-Every repo has a `.env.example` listing the variables it reads, and the READMEs explain each one.
+Each service repo has a `.env.example` listing the variables it reads, and the READMEs explain each one.
 Generate the secrets yourself, for example with `openssl rand -hex 32`.
 
 **gum-indexer**: `DATABASE_URL`, `GUM_WEBHOOK__SECRET`,
